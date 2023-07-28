@@ -1,0 +1,43 @@
+Mensajes JSON:
+Servicio 1:
+URL: http://localhost:8080/api/v1/empresa/empresa-create
+Método: POST
+{
+    "ruc": "A12345678",
+    "razonSocial": "La favorita S.A.",
+    "cuentaPrincipal": "ES94004900011234567890",
+    "empleados": [
+        {
+            "cedula": "1234567890",
+            "apellidos": "López Figueroa",
+            "nombres": "Juan Marco",
+            "numeroCuenta": "ES94004900011234567000"
+        },
+        {
+            "cedula": "1987654321",
+            "apellidos": "Pérez Butista",
+            "nombres": "María Fernanda",
+            "numeroCuenta": "ES94004900011234567001"
+        }
+    ]
+}
+
+Servicio 2:
+URL: http://localhost:8080/api/v1/pago-rol/rol-create/1
+Método: POST
+{
+  "mes": 1,
+  "fechaProceso": "2023-07-28T12:00:00Z",
+  "rucEmpresa": "A12345678",
+  "cuentaPrincipal": "ES94004900011234567890",
+  "empleadosPagoRQ": [
+    {
+      "numeroCuenta": "ES94004900011234567000",
+      "valor": 1500.65
+    },
+    {
+      "numeroCuenta": "ES94004900011234567002",
+      "valor": 2000.55
+    }
+  ]
+}
